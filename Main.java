@@ -1,4 +1,4 @@
-package main;
+
 
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -13,13 +13,13 @@ public class Main{
         System.out.println("Enter the value of n");
         n = scanner.nextInt();
         
-        ArrayList<Person> v = new ArrayList<>(n);
+        ArrayList<Person> v = new ArrayList<>();
         for(int i=0;i<n;i++)
         {
             int id;
             float age;
             String name;
-            System.out.println("Enter the person " + i+1);
+            System.out.println("Enter the person " + (i+1));
             id = scanner.nextInt();
             age = scanner.nextFloat();
             name = scanner.next();
@@ -28,13 +28,13 @@ public class Main{
             p.setId(id);
             p.setAge(age);
             p.setName(name);
-            v.set(i, p);
+            v.add(p);
         }
 
         for(int i=0;i<n;i++)
         {
-            System.out.println("The value of person "+ i+1 +"is ");
-            System.out.println(v.get(i).getId());
+            System.out.println("The value of person " + (i+1) + " is ");
+            System.out.println(v.get(i).getId() + " " + v.get(i).getAge() + " " + v.get(i).getName());
         }
 
     }
