@@ -1,41 +1,33 @@
-
-
 import java.util.Scanner;
 import java.util.ArrayList;
+import packages.*;
 
-import newpackage.Person;
-
-public class Main{
+public class main {
     public static void main(String[] args){
-
         Scanner scanner = new Scanner(System.in);
+        
         int n;
         System.out.println("Enter the value of n");
         n = scanner.nextInt();
-        
-        ArrayList<Person> v = new ArrayList<>();
-        for(int i=0;i<n;i++)
-        {
-            int id;
-            float age;
-            String name;
-            System.out.println("Enter the person " + (i+1));
-            id = scanner.nextInt();
-            age = scanner.nextFloat();
-            name = scanner.next();
 
-            Person p = new Person();
-            p.setId(id);
-            p.setAge(age);
-            p.setName(name);
-            v.add(p);
+        ArrayList<car>v = new ArrayList<>(n);
+
+        for(int i=0;i<n;i++){
+            int rno;
+            String ms;
+            System.out.println("Enter the value of rno and ms");
+            rno = scanner.nextInt();
+            ms = scanner.next();
+
+            car c = new car();
+            c.setRno(rno);
+            c.setMs(ms);
+
+            v.add(c);
         }
 
-        for(int i=0;i<n;i++)
-        {
-            System.out.println("The value of person " + (i+1) + " is ");
-            System.out.println(v.get(i).getId() + " " + v.get(i).getAge() + " " + v.get(i).getName());
+        for(int i=0;i<n;i++){
+            System.out.println("For car " + i+1 + " the rno is " + v.get(i).getRno() + "and ms is " + v.get(i).getMs());
         }
-
     }
 }
