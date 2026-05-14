@@ -1,3 +1,5 @@
+package main;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 import packages.*;
@@ -10,7 +12,7 @@ public class main {
         System.out.println("Enter the value of n");
         n = scanner.nextInt();
 
-        ArrayList<car>v = new ArrayList<>(n);
+        ArrayList<car>v = new ArrayList<>();
 
         for(int i=0;i<n;i++){
             int rno;
